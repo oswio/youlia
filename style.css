@@ -1,0 +1,346 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: 230 35% 7%;
+  --clr-light: rgb(227, 221, 210);
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-900: 2rem;
+  --fs-800: 1.75rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1.35rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* font-families */
+  --ff-serif: "Source Serif Pro", serif;
+  --ff-sans-serif: "Open Sans", sans-serif;
+  --ff-cursive: "Arima Madurai", cursive;
+}
+
+/* media root */
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+* {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+body {
+  font-size: 100%;
+  font-size: 16px;
+  background-color: var(--clr-light);
+  font-family: var(--ff-sans-serif);
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--fs-900);
+  color: #2b2422;
+  margin-bottom: 1em;
+}
+
+.text {
+  font-size: var(--fs-600);
+}
+
+/* PHOTO collage */
+.photos {
+  padding-bottom: 1.5em;
+  padding-top: 5em;
+  margin-left: 16em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 4px;
+  /* margin: 10px; */
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  /* margin: 10px; */
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 0.225em;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* /PHOTO collage */
+
+/* NAVBAR */
+header {
+  position: fixed;
+  height: 50vh;
+  margin: 3em;
+}
+
+nav {
+  gap: 2.5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--fs-900);
+  font-family: var(--ff-serif);
+  text-align: center;
+}
+
+.logo h1 a {
+  font-weight: 600;
+  color: #2b2422;
+}
+
+.logo h1 a:hover {
+  color: #786a66;
+  transition: 0.225s;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+}
+
+.primary-navigation {
+  font-size: var(--fs-700);
+}
+
+.primary-navigation a {
+  color: #2b2422;
+  text-align: center;
+}
+
+.primary-navigation a:hover {
+  color: #786a66;
+  transition: 0.225s;
+  text-decoration: none;
+}
+
+#active {
+  border-bottom: 2.5px solid #2b2422;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: ;
+}
+
+/* ABOUT PAGE */
+.about-container,
+.classes-container,
+.contact-container {
+  padding-top: 15em;
+  padding-left: 25em;
+}
+
+.about {
+  height: 85vh;
+}
+
+.about-container {
+  padding-top: 10em;
+}
+
+.about-container {
+  /* margin-bottom: 5em; */
+}
+.about-info {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  max-width: 1280px;
+  align-items: center;
+}
+
+.about-container > p {
+  max-width: 800px;
+}
+
+img {
+  width: 100%;
+}
+
+/* /ABOUT PAGE */
+
+/* CLASSES PAGE */
+
+.classes-txt p {
+  max-width: 800px;
+  font-size: ;
+}
+
+.classes-container {
+  height: 81.7vh;
+}
+
+.classes-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.classes-txt {
+  padding-right: 50px;
+}
+
+.carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.carousel {
+  width: 400px;
+}
+
+/* CONTACT PAGE */
+.contact-container {
+  height: 85vh;
+}
+/* /CONTACT PAGE */
+
+/* FOOTER */
+footer {
+  background-color: #a7977c;
+  padding: 1.15em 5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* font-family: var(--ff-cursive); */
+}
+
+.tags-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5px;
+}
+
+.col {
+  max-width: 600px;
+}
+
+.left {
+  line-height: 1;
+}
+
+.left p {
+  margin-top: 10px;
+}
+
+.social {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+i {
+  font-size: 3.5rem;
+  color: rgb(255, 250, 241);
+}
+
+i:hover {
+  color: rgb(226, 218, 200);
+  transition: 0.25s;
+  transform: translateY(-7px);
+  box-shadow: 0px 13px 19px -5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 13px 19px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 13px 19px -5px rgba(0, 0, 0, 0.6);
+}
+
+.col h3 {
+  color: var(--clr-light);
+  font-weight: bold;
+  text-align: center;
+}
+
+.tags-list li {
+  list-style: none;
+  padding: 0.25em;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #827770;
+  font-size: 0.8rem;
+  cursor: default;
+  border-radius: 0.15em;
+}
+
+.tags-list li:hover {
+  background-color: #786a66;
+}
