@@ -110,6 +110,7 @@ body {
   vertical-align: middle;
   width: 100%;
   border-radius: 0.225em;
+  cursor: pointer; /*test*/
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -370,6 +371,7 @@ i:hover {
 @media (max-width: 1080px) {
   header {
     position: relative;
+    height: auto;
   }
   .mobile-nav-toggle {
     display: block;
@@ -426,6 +428,11 @@ i:hover {
 
   #active {
     border: none;
+  }
+
+  main {
+    margin-top: -5em;
+    margin-left: -16em;
   }
 }
 
