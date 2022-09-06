@@ -327,6 +327,7 @@ i:hover {
 }
 
 .col h3 {
+  font-size: 1rem;
   color: var(--clr-light);
   font-weight: bold;
   text-align: center;
@@ -434,6 +435,26 @@ i:hover {
     margin-top: -5em;
     margin-left: -16em;
   }
+
+  .col i {
+    font-size: 2.5rem;
+  }
+
+  .col h3 {
+    font-size: 1rem;
+  }
+
+  .col {
+    max-width: 300px;
+  }
+
+  .col p {
+    font-size: 0.9rem;
+  }
+
+  .col li {
+    font-size: 0.75rem;
+  }
 }
 
 .primary-navigation a {
@@ -446,5 +467,45 @@ i:hover {
   .contact-container {
     padding-top: 10em;
     padding-left: 15em;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 2em;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  .col {
+    max-width: 500px;
+  }
+
+  .col h3 {
+    font-size: 2rem;
+  }
+
+  .col p {
+    font-size: 1.25rem;
+  }
+
+  .col li {
+    font-size: 1rem;
+  }
+
+  .col i {
+    font-size: 6rem;
+  }
+
+  .center,
+  .right {
+    margin-top: 45px;
+  }
+
+  .tags-list {
+    padding: 0 10px;
+    justify-content: center;
   }
 }
