@@ -413,13 +413,13 @@ i:hover {
     display: block;
     position: absolute;
     z-index: 2000;
-    right: 3rem;
-    top: 3rem;
+    right: 2.25rem;
+    top: 2.25rem;
     background: transparent;
     background-image: url(assets/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 2rem;
+    width: 3rem;
     aspect-ratio: 1;
     border: 0;
     cursor: pointer;
