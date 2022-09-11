@@ -217,7 +217,7 @@ a {
 }
 
 .about-container {
-  /* margin-bottom: 5em; */
+  margin-bottom: 2.2em;
 }
 .about-info {
   display: flex;
@@ -474,6 +474,7 @@ i:hover {
 
   .carousel {
     height: 100%;
+    margin-right: 15px;
   }
 
   .text {
