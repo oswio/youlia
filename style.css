@@ -531,7 +531,7 @@ i:hover {
   }
 
   .classes-container {
-    margin-bottom: 3.5em;
+    margin-bottom: 5em;
     padding-left: 0;
   }
 
@@ -583,8 +583,9 @@ i:hover {
   }
 
   #classes-footer .container {
-    gap: 3em;
-    height: 76vh;
+    margin-top: 1em;
+    gap: 4em;
+    height: 820px;
   }
 }
 
