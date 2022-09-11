@@ -380,7 +380,7 @@ i:hover {
     display: block;
   }
   .logo {
-    display: none;
+    display: block;
   }
 
   .primary-navigation {
