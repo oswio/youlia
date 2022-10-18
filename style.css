@@ -12,7 +12,7 @@
   --fs-900: 2rem;
   --fs-800: 1.75rem;
   --fs-700: 1.5rem;
-  --fs-600: 1.35rem;
+  --fs-600: 1.25rem;
   --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
@@ -21,7 +21,8 @@
   /* font-families */
   --ff-serif: "Source Serif Pro", serif;
   --ff-sans-serif: "Open Sans", sans-serif;
-  --ff-cursive: "Arima Madurai", cursive;
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-montserrat-alt: "Montserrat Alternates", sans-serif;
 }
 
 /* media root */
@@ -83,6 +84,56 @@ body {
   /* max-height: 60vh; */
 }
 
+/* main photo */
+.main-photo {
+  width: 700px;
+  padding-bottom: 1.5em;
+  padding-top: 5em;
+  margin-left: 16em;
+  margin: 0 auto;
+  height: 85vh;
+}
+
+.gallery-link {
+  margin-top: 20px;
+}
+
+.gallery-link * {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #222222;
+  font-family: var(--ff-montserrat);
+}
+
+.gallery-link i {
+  font-size: inherit;
+  margin-left: 10px;
+}
+
+.gallery-link:hover {
+  opacity: 70%;
+  transition: 0.25s;
+}
+
+img {
+  z-index: -1;
+  position: relative;
+  box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -webkit-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+}
+
+.main-photo img {
+  /* padding-bottom: 1.5em; */
+  /* padding-top: 5em; */
+  max-width: 90%;
+  margin-left: 10em;
+  box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -webkit-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+}
+
 /* PHOTO collage */
 .photos {
   padding-bottom: 1.5em;
@@ -111,7 +162,7 @@ body {
   vertical-align: middle;
   width: 95%;
   border-radius: 0.225em;
-  cursor: pointer; /*test*/
+  z-index: -1;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -130,6 +181,21 @@ body {
   }
 }
 
+.art-title {
+  display: block;
+  width: 95%;
+  height: 50px;
+  background-color: var(--clr-light);
+  margin-top: -50px;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.art-title:hover {
+  transition: 0.2s;
+  opacity: 100%;
+}
+
 /* /PHOTO collage */
 
 /* NAVBAR */
@@ -140,11 +206,14 @@ header {
 }
 
 nav {
-  gap: 2.5em;
+  font-family: var(--ff-montserrat);
+  font-weight: 300;
+  text-transform: uppercase;
+  gap: 150px;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .mobile-nav-toggle {
@@ -152,13 +221,14 @@ nav {
 }
 
 .logo {
-  font-size: var(--fs-900);
-  font-family: var(--ff-serif);
-  text-align: center;
+  font-size: var(--fs-600);
+  font-family: var(--ff-montserrat-al);
+  text-align: left;
 }
 
 .logo h1 a {
-  font-weight: 600;
+  font-weight: 300;
+  text-align: left;
   color: #2b2422;
 }
 
@@ -176,11 +246,11 @@ nav ul {
 }
 
 .primary-navigation {
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
 }
 
 .primary-navigation a {
-  color: #2b2422;
+  color: #222222;
   text-align: center;
 }
 
@@ -191,7 +261,7 @@ nav ul {
 }
 
 #active {
-  border-bottom: 2.5px solid #2b2422;
+  border-bottom: 1px solid #555555;
   margin: 0;
   padding: 0;
 }
@@ -214,10 +284,7 @@ a {
 
 .about-container {
   padding-top: 10em;
-}
-
-.about-container {
-  margin-bottom: 2.2em;
+  margin-bottom: 3.6em;
 }
 .about-info {
   display: flex;
@@ -506,6 +573,20 @@ i:hover {
   }
 }
 
+@media (max-width: 800px) {
+  .art-title {
+    opacity: 80%;
+  }
+
+  .main-photo img {
+    max-width: 80%;
+    margin-left: 12em;
+  }
+
+  .gallery-link {
+  }
+}
+
 @media (max-width: 600px) {
   footer {
     padding: 1em 3em;
@@ -513,6 +594,28 @@ i:hover {
 }
 
 @media (max-width: 600px) {
+  main {
+    height: 800px;
+  }
+
+  .gallery-link {
+    margin-right: 25px;
+    margin-top: 50px;
+  }
+
+  .gallery-link a {
+    font-size: var(--fs-700);
+  }
+
+  .main-photo {
+    max-width: 400px;
+  }
+
+  .main-photo img {
+    max-width: 100%;
+    margin-left: 7.5em;
+  }
+
   .primary-navigation {
     align-items: center;
     font-size: 2rem;
@@ -542,6 +645,8 @@ i:hover {
 
   footer {
     padding: 2em;
+    /* height: 15vh; */
+    /* test */
   }
 
   footer .container {
@@ -603,4 +708,31 @@ footer {
 /* CONTACT PAGE TEMPORARY STYLE */
 .contact-container {
   height: 85.2vh;
+}
+
+/* ART INFO */
+
+.art_info {
+  display: none;
+  background: rgba(7, 7, 7, 0.63);
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  margin: 0 auto;
+}
+
+.box {
+  display: none;
+  z-index: 15;
+  position: fixed;
+  width: 70%;
+  height: 70%;
+  margin-left: 15%;
+  margin-top: 150px;
+  background: rgb(223, 223, 223);
+}
+
+.box img {
+  width: 40px;
 }
