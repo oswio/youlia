@@ -237,6 +237,10 @@ nav {
   transition: 0.225s;
 }
 
+#logo-mob {
+  display: none;
+}
+
 nav ul {
   padding: 0;
   display: flex;
@@ -594,8 +598,16 @@ i:hover {
 }
 
 @media (max-width: 600px) {
+  #logo-full {
+    text-align: center;
+  }
+
+  #logo-mob {
+    display: block;
+  }
+
   main {
-    height: 800px;
+    /* height: 800px; */
   }
 
   .gallery-link {

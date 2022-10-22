@@ -22,6 +22,7 @@ const column3 = document.getElementById("col3");
 
 const artInfo = document.getElementById("art_info")
 const box = document.getElementById("box")
+
 // col1
 const imgCol1 = [
     {
@@ -261,7 +262,7 @@ const imgCol3 = [
 
 function getImgHtml1() {
     return imgCol1.map(function (id) {
-        return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
+        return `<img onclick="click()" src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
         <div class="art-title">
             <p><a href="#">${id.info}</a></p>
         </div>
@@ -271,7 +272,7 @@ function getImgHtml1() {
 
 function getImgHtml2() {
     return imgCol2.map(function (id) {
-        return `<img src = "../img/main_page/${id.imgSrc}.jpg" alt = "grid img">
+        return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
         <div class="art-title">
             <p><a href="#">${id.info}</a></p>
         </div>
@@ -281,12 +282,16 @@ function getImgHtml2() {
 
 function getImgHtml3() {
     return imgCol3.map(function (id) {
-        return `<img src = "../img/main_page/${id.imgSrc}.jpg" alt = "grid img" onmouseover="hide()">
+        return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img" >
         <div class="art-title">
             <p><a href="#">${id.info}</a></p>
         </div>
     `
     }).join("")
+}
+
+function click() {
+    alert("works")
 }
 
 column1.innerHTML = getImgHtml1();
