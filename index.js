@@ -24,7 +24,27 @@ const artInfo = document.getElementById("art_info")
 const box = document.getElementById("box")
 
 // col1
-const imgCol1 = [
+const imgCol = [
+    {
+        imgSrc: '1024/1',
+        info: "del"
+    },
+
+    {
+        imgSrc: '1024/2',
+        info: "new1"
+    },
+
+    {
+        imgSrc: '1024/3',
+        info: "new1"
+    },
+
+    {
+        imgSrc: '1024/13',
+        info: "new1"
+    },
+
     {
         imgSrc: 'new1',
         info: "new1"
@@ -36,232 +56,108 @@ const imgCol1 = [
     },
 
     {
-        imgSrc: 'first',
-        info: "First"
+        imgSrc: '1024/14',
+        info: "new1"
     },
 
-    {
-        imgSrc: 'second',
-        info: "2"
-    },
 
     {
         imgSrc: 'three',
         info: "3"
     },
+    // ]
+    // col2
+    // const imgCol2 = [
 
     {
-        imgSrc: '4',
-        info: "4"
+        imgSrc: '1024/6',
+        info: "new1"
     },
 
     {
-        imgSrc: '5',
-        info: "5"
+        imgSrc: '1024/12',
+        info: "new1"
     },
 
     {
-        imgSrc: '6',
-        info: "6"
+        imgSrc: '1024/11',
+        info: "new1"
     },
 
     {
-        imgSrc: '7',
-        info: "7"
+        imgSrc: '1024/15',
+        info: "new1"
     },
 
     {
-        imgSrc: '8',
-        info: "8"
+        imgSrc: '1024/16',
+        info: "new1"
     },
 
-    {
-        imgSrc: '9',
-        info: "9"
-    },
-
-    {
-        imgSrc: '10',
-        info: "10"
-    },
-
-    {
-        imgSrc: '12',
-        info: "12"
-    },
-
-    {
-        imgSrc: '13',
-        info: "13"
-    },
-
-    {
-        imgSrc: '14',
-        info: "14"
-    },
-
-    {
-        imgSrc: '15',
-        info: "15"
-    },
-
-    {
-        imgSrc: '15a',
-        info: "16"
-    }
-]
-// col2
-const imgCol2 = [
     {
         imgSrc: 'new2',
         info: "new2"
     },
 
     {
-        imgSrc: 'new5',
-        info: "new5"
+        imgSrc: '1024/4',
+        info: "new1"
+    },
+
+
+    // ]
+    // col3
+    // const imgCol3 = [
+    {
+        imgSrc: '1024/7',
+        info: "new1"
     },
 
     {
-        imgSrc: '16',
-        info: ""
+        imgSrc: '1024/1a',
+        info: "new1"
     },
 
     {
-        imgSrc: '17',
-        info: ""
+        imgSrc: '1024/8',
+        info: "new1"
     },
 
     {
-        imgSrc: '18',
-        info: ""
+        imgSrc: '1024/5',
+        info: "new1"
     },
 
     {
-        imgSrc: '19',
-        info: ""
+        imgSrc: '1024/19',
+        info: "new1"
     },
 
     {
-        imgSrc: '20',
-        info: ""
+        imgSrc: '1024/20',
+        info: "new1"
     },
 
     {
-        imgSrc: '21',
-        info: ""
+        imgSrc: '1024/9',
+        info: "new1"
     },
 
     {
-        imgSrc: '22',
-        info: ""
+        imgSrc: '1024/10',
+        info: "new1"
     },
 
-    {
-        imgSrc: '23',
-        info: ""
-    },
-
-    {
-        imgSrc: '24',
-        info: ""
-    },
-
-    {
-        imgSrc: '24a',
-        info: ""
-    },
-
-    {
-        imgSrc: '25',
-        info: ""
-    },
-
-    {
-        imgSrc: '26',
-        info: ""
-    },
-
-    {
-        imgSrc: '27',
-        info: ""
-    }
-]
-// col3
-const imgCol3 = [
     {
         imgSrc: 'new4',
         info: "new4"
     },
 
-    {
-        imgSrc: '29',
-        info: ""
-    },
 
-    {
-        imgSrc: '30',
-        info: ""
-    },
-
-    {
-        imgSrc: '31',
-        info: ""
-    },
-
-    {
-        imgSrc: '32',
-        info: ""
-    },
-
-    {
-        imgSrc: '33',
-        info: ""
-    },
-
-    {
-        imgSrc: '34',
-        info: ""
-    },
-
-    {
-        imgSrc: '35',
-        info: ""
-    },
-
-    {
-        imgSrc: '36',
-        info: ""
-    },
-
-    {
-        imgSrc: '37',
-        info: ""
-    },
-
-    {
-        imgSrc: '38',
-        info: ""
-    },
-
-    {
-        imgSrc: '39',
-        info: ""
-    },
-
-    {
-        imgSrc: '40',
-        info: ""
-    },
-
-    {
-        imgSrc: '41',
-        info: ""
-    },
 ]
 
-function getImgHtml1() {
-    return imgCol1.map(function (id) {
+function getImgHtml() {
+    return imgCol.map(function (id) {
         return `<img onclick="click()" src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
         <div class="art-title">
             <p><a href="#">${id.info}</a></p>
@@ -270,30 +166,27 @@ function getImgHtml1() {
     }).join("")
 }
 
-function getImgHtml2() {
-    return imgCol2.map(function (id) {
-        return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
-        <div class="art-title">
-            <p><a href="#">${id.info}</a></p>
-        </div>
-    `
-    }).join("")
-}
+// function getImgHtml2() {
+//     return imgCol2.map(function (id) {
+//         return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
+//         <div class="art-title">
+//             <p><a href="#">${id.info}</a></p>
+//         </div>
+//     `
+//     }).join("")
+// }
 
-function getImgHtml3() {
-    return imgCol3.map(function (id) {
-        return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img" >
-        <div class="art-title">
-            <p><a href="#">${id.info}</a></p>
-        </div>
-    `
-    }).join("")
-}
+// function getImgHtml3() {
+//     return imgCol3.map(function (id) {
+//         return `<img src="../img/main_page/${id.imgSrc}.jpg" alt="grid img" >
+//         <div class="art-title">
+//             <p><a href="#">${id.info}</a></p>
+//         </div>
+//     `
+//     }).join("")
+// }
 
-function click() {
-    alert("works")
-}
 
-column1.innerHTML = getImgHtml1();
-column2.innerHTML = getImgHtml2();
-column3.innerHTML = getImgHtml3();
+column2.innerHTML = getImgHtml();
+// column2.innerHTML = getImgHtml2();
+// column3.innerHTML = getImgHtml3();

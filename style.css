@@ -119,19 +119,21 @@ body {
 img {
   z-index: -1;
   position: relative;
-  box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  /* box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
   -webkit-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
-  -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75); */
 }
 
 .main-photo img {
   /* padding-bottom: 1.5em; */
   /* padding-top: 5em; */
-  max-width: 90%;
-  margin-left: 10em;
-  box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
-  -webkit-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
-  -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  max-width: 120%;
+  width: 700px;
+  margin-left: 3em;
+  margin-top: 3em;
+  /* box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75);
+  -webkit-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75); */
+  /* -moz-box-shadow: 0px 8px 19px 0px rgba(100, 100, 100, 0.75); */
 }
 
 /* PHOTO collage */
@@ -152,7 +154,7 @@ img {
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
-  max-width: 25%;
+  max-width: 50%;
   padding: 0 4px;
   /* margin: 10px; */
 }
@@ -160,7 +162,7 @@ img {
 .column img {
   margin-top: 10px;
   vertical-align: middle;
-  width: 95%;
+  width: 80%;
   border-radius: 0.225em;
   z-index: -1;
 }
@@ -202,7 +204,7 @@ img {
 header {
   position: fixed;
   height: 50vh;
-  margin: 3em;
+  margin: 6.5em 6em;
 }
 
 nav {
@@ -221,7 +223,7 @@ nav {
 }
 
 .logo {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
   font-family: var(--ff-montserrat-al);
   text-align: left;
 }
@@ -504,10 +506,10 @@ i:hover {
   #active {
     border: none;
   }
-
+  /* Nov 23 */
   main {
     margin-top: -5em;
-    margin-left: -15em;
+    margin-left: -16em;
   }
 
   .col i {
@@ -528,6 +530,10 @@ i:hover {
 
   .col li {
     font-size: 0.75rem;
+  }
+  /* Nov 23 */
+  .column img {
+    width: 100%;
   }
 
   .about-container,
