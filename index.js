@@ -25,30 +25,34 @@ const box = document.getElementById("box")
 
 // col1
 const imgCol = [
-    {
-        imgSrc: '1024/1',
-        info: "del"
-    },
 
     {
-        imgSrc: '1024/2',
+        imgSrc: '1024/10',
         info: "new1"
     },
 
-    {
-        imgSrc: '1024/3',
-        info: "new1"
-    },
-
-    {
-        imgSrc: '1024/13',
-        info: "new1"
-    },
 
     {
         imgSrc: 'new1',
         info: "new1"
     },
+
+
+    {
+        imgSrc: '1024/11',
+        // info: "new1"
+    },
+
+
+    // {
+    //     imgSrc: '1024/2',
+    //     info: "new1"
+    // },
+
+    // {
+    //     imgSrc: 'new2',
+    //     info: "new2"
+    // },
 
     {
         imgSrc: 'new3',
@@ -56,33 +60,47 @@ const imgCol = [
     },
 
     {
-        imgSrc: '1024/14',
+        imgSrc: '1024/1',
+        info: "del"
+    },
+
+    {
+        imgSrc: '32',
+        info: "32"
+    },
+
+    // {
+    //     imgSrc: '1024/20',
+    //     info: "new1"
+    // },
+
+    {
+        imgSrc: '1024/3',
         info: "new1"
     },
 
+    // {
+    //     imgSrc: '1024/13',
+    //     info: "new1"
+    // },
 
-    {
-        imgSrc: 'three',
-        info: "3"
-    },
+
+
+
+
+    // {
+    //     imgSrc: '1024/14',
+    //     info: "new1"
+    // },
+
+
+    // {
+    //     imgSrc: 'three',
+    //     info: "3"
+    // },
     // ]
     // col2
     // const imgCol2 = [
-
-    {
-        imgSrc: '1024/6',
-        info: "new1"
-    },
-
-    {
-        imgSrc: '1024/12',
-        info: "new1"
-    },
-
-    {
-        imgSrc: '1024/11',
-        info: "new1"
-    },
 
     {
         imgSrc: '1024/15',
@@ -95,14 +113,25 @@ const imgCol = [
     },
 
     {
-        imgSrc: 'new2',
-        info: "new2"
+        imgSrc: 'new4',
+        info: "new4"
     },
 
-    {
-        imgSrc: '1024/4',
-        info: "new1"
-    },
+    // {
+    //     imgSrc: '1024/6',
+    //     info: "new1"
+    // },
+
+    // {
+    //     imgSrc: '1024/12',
+    //     info: "new1"
+    // },
+
+
+    // {
+    //     imgSrc: '1024/4',
+    //     info: "new1"
+    // },
 
 
     // ]
@@ -113,10 +142,10 @@ const imgCol = [
         info: "new1"
     },
 
-    {
-        imgSrc: '1024/1a',
-        info: "new1"
-    },
+    // {
+    //     imgSrc: '1024/1a',
+    //     info: "new1"
+    // },
 
     {
         imgSrc: '1024/8',
@@ -128,30 +157,29 @@ const imgCol = [
         info: "new1"
     },
 
-    {
-        imgSrc: '1024/19',
-        info: "new1"
-    },
+    // {
+    //     imgSrc: '1024/19',
+    //     info: "new1"
+    // },
+
+
+    // {
+    //     imgSrc: '1024/9',
+    //     info: "new1"
+    // },
 
     {
-        imgSrc: '1024/20',
-        info: "new1"
+        imgSrc: '1024/4',
+        info: "Nov27"
     },
-
     {
-        imgSrc: '1024/9',
-        info: "new1"
+        imgSrc: '1024/13',
+        info: "Nov27"
     },
-
-    {
-        imgSrc: '1024/10',
-        info: "new1"
-    },
-
-    {
-        imgSrc: 'new4',
-        info: "new4"
-    },
+    // {
+    //     imgSrc: '1024/17',
+    //     info: "Nov27"
+    // },
 
 
 ]
@@ -159,12 +187,12 @@ const imgCol = [
 function getImgHtml() {
     return imgCol.map(function (id) {
         return `<img onclick="click()" src="../img/main_page/${id.imgSrc}.jpg" alt="grid img">
-        <div class="art-title">
-            <p><a href="#">${id.info}</a></p>
-        </div>
-    `
+        `
     }).join("")
 }
+// <div class="art-title">
+//     <p><a href="#">${id.info}</a></p>
+// </div>
 
 // function getImgHtml2() {
 //     return imgCol2.map(function (id) {
